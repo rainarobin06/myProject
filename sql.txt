@@ -1,0 +1,12 @@
+SELECT * FROM t_case_a -- tbl
+
+SELECT colname FROM t_case_a -- col only
+
+SELECT * FROM tblname
+WHERE colname = '' ORDER BY colname asc; -- order
+
+SELECT RowID FROM t_case_a WHERE RowID > 2
+GROUP BY RowID,CaseStatus ORDER BY CaseStatus desc -- particlur col
+
+SELECT COUNT(RowID), RowID FROM t_case_a 
+WHERE RowID < 3 GROUP BY RowID ORDER BY RowID asc
